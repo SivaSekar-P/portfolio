@@ -506,15 +506,48 @@ setInterval(showNextSlide, 3000); // 3s per slide
   </div>
 </section>
 
+
 <section id="contact" data-aos="zoom-in-up">
   <h2>Contact Me</h2>
-  <form class="contact-form">
-    <input type="text" placeholder="Your Name" required>
-    <input type="email" placeholder="Your Email" required>
-    <textarea placeholder="Your Message" required></textarea>
+  <form class="contact-form" id="contact-form">
+    <input type="text" name="from_name" placeholder="Your Name" required>
+    <input type="email" name="from_email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Your Message" required></textarea>
     <button type="submit">Send Message</button>
   </form>
+  <p id="form-status" style="margin-top:10px; font-weight:bold;"></p>
 </section>
+
+
+<!-- EmailJS SDK -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+  (function(){
+      emailjs.init("m9whkxkToVNlFXQr9"); // Replace with your EmailJS Public Key
+  })();
+</script>
+
+<script>
+  document.getElementById("contact-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const status = document.getElementById("form-status");
+    status.textContent = "Sending...";
+
+    emailjs.sendForm("service_6307jwb", "template_6g1q2ch", this)
+      .then(() => {
+        status.style.color = "green";
+        status.textContent = "Message sent successfully!";
+        this.reset();
+      }, (error) => {
+        status.style.color = "red";
+        status.textContent = "Failed to send. Please try again.";
+        console.error("EmailJS Error:", error);
+      });
+  });
+</script>
+
+
 
 <footer>
   <p>Email: psivasekar1@gmail.com</p>
