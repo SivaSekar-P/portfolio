@@ -346,3 +346,190 @@ footer {
   .cert-icon { max-width: 250px; }
   .skill-item img { width: 40px; height: 40px; }
 }
+
+
+/* Internships Section */
+#internships {
+  text-align: center;
+  padding: 5rem 3rem; /* Increased spacing */
+  max-width: 1200px;  /* Larger section width */
+  margin: auto;
+}
+
+.internship-slider {
+  position: relative;
+  max-width: 1100px; /* Wider slider */
+  margin: 0 auto;
+}
+
+.internship-slide {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem; /* More spacing between image & text */
+  padding: 30px;
+  border: 2px solid #ffcc00;
+  border-radius: 12px;
+  background-color: #ffffff !important;
+  color: #333 !important;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  margin-bottom: 3rem;
+  opacity: 0;
+  transition: all 0.8s ease;
+}
+
+/* Entry animations */
+.internship-slide.slide-left { transform: translateX(-60px); }
+.internship-slide.slide-right { transform: translateX(60px); }
+.internship-slide.active { opacity: 1; transform: translateX(0); }
+
+/* Image styling - force consistent sizes */
+.internship-image {
+  position: relative;
+  flex: 1;
+  max-width: 400px; /* Increased for landscape images */
+  min-width: 300px;
+}
+.internship-image img {
+  width: 100%;
+  height: 280px;          /* Fixed uniform height */
+  border-radius: 12px;
+  border: 3px solid #ffcc00;
+  object-fit: cover;      /* Ensures same size look */
+}
+.company-tag {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 204, 0, 0.95);
+  color: #000;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 0 0 12px 12px;
+  font-size: 1rem;
+}
+
+/* Internship details */
+.internship-details {
+  flex: 2;
+  text-align: left;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+.internship-details h3 {
+  color: #ff9900;
+  margin-bottom: 0.8rem;
+  font-size: 1.5rem;
+}
+.internship-details p { margin-bottom: 0.6rem; }
+
+/* Dark mode */
+body.dark-mode .internship-slide {
+  background-color: #1e1e1e !important;
+  color: #f5f5f5 !important;
+  border-color: #ffcc00;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+}
+body.dark-mode .company-tag {
+  background: rgba(255, 204, 0, 0.8);
+  color: #121212;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .internship-slide { flex-direction: column; text-align: center; }
+  .internship-details { text-align: center; }
+  .internship-image img { height: auto; max-height: 250px; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Certificate & Internship Image Hover Pop-up Effect */
+.cert-icon,
+.internship-image img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  will-change: transform;
+}
+
+/* Hover enlarge effect ONLY for certifications & internships */
+.cert-icon:hover,
+.internship-image img:hover {
+  transform: scale(1.15);   /* Slightly larger zoom */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+/* Prevent overlapping of zoomed images inside internships */
+.internship-image {
+  overflow: hidden; /* keeps image inside box */
+  border-radius: 12px;
+}
+
+/* Do NOT apply hover effect to education images */
+.edu-card img {
+  transform: none !important;
+  box-shadow: none !important;
+  transition: none !important;
+}
+
+/* Alternate Internship Layout (left/right flip) */
+.internship-slide {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+/* Even internship cards → image right, text left */
+.internship-slide:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+/* Responsive fix */
+@media (max-width: 900px) {
+  .internship-slide {
+    flex-direction: column !important;
+    text-align: center;
+  }
+  .internship-details {
+    text-align: center;
+  }
+}
+
+
+
+
+[data-aos="slide-up"] {
+  transform: translateY(50px);
+  opacity: 0;
+  transition: all 0.8s ease-out;
+}
+
+[data-aos="slide-up"].aos-animate {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+[data-aos="slide-down"] {
+  transform: translateY(-50px);
+  opacity: 0;
+  transition: all 0.8s ease-out;
+}
+
+[data-aos="slide-down"].aos-animate {
+  transform: translateY(0);
+  opacity: 1;
+}
+
