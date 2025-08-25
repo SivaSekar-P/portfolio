@@ -53,7 +53,7 @@ themeToggleBtn.addEventListener('click', () => {
 </script>
 </header>
 
-<section class="hero" data-aos="fade-up">
+<section class="hero" data-aos="fade-up" data-aos-once="false" data-aos-mirror="true">
   <div>
     <img src="profile_image.jpg" alt="Profile Picture" class="profile-pic"/>
   </div>
@@ -70,7 +70,7 @@ themeToggleBtn.addEventListener('click', () => {
   </div>
 </section>
 
-<section id="skills" data-aos="fade-up">
+<section id="skills" data-aos="fade-up" data-aos-once="false" data-aos-mirror="true">
   <h2 class="skills-heading">Skills</h2>
   <div class="skill-marquee-wrapper">
     <div class="skill-marquee">
@@ -96,7 +96,7 @@ themeToggleBtn.addEventListener('click', () => {
 </section>
 
 
-<section id="about" data-aos="fade-up">
+<section id="about" data-aos="fade-up" data-aos-once="false" data-aos-mirror="true">
   <h2>About Me</h2>
   <div class="about-me">
   <div><p>
@@ -119,20 +119,20 @@ themeToggleBtn.addEventListener('click', () => {
 </section>
 
 
-<section id="education" data-aos="fade-up">
+<section id="education" data-aos="fade-up" data-aos-once="false" data-aos-mirror="true">
   <h2>My Education</h2>
   <div class="edu-container">
-    <div class="edu-card" data-aos="fade-right">
+    <div class="edu-card" data-aos="fade-right" data-aos-once="false" data-aos-mirror="true">
       <img src="rit.jpg" alt="College">
       <h3>Ramco Institute Of Technology</h3>
       <p>B.Tech - Information Technology (2022-2026) <br> CGPA: 8.15</p>
     </div>
-    <div class="edu-card" data-aos="fade-up">
+    <div class="edu-card" data-aos="fade-up" data-aos-once="false" data-aos-mirror="true">
       <img src="school.jpg" alt="School">
       <h3>Shree Swami Vivekananda Matriculation Higher Secondary School</h3>
       <p>HSC (2022) - 80.6%</p>
     </div>
-    <div class="edu-card" data-aos="fade-left">
+    <div class="edu-card" data-aos="fade-left" data-aos-once="false" data-aos-mirror="true">
       <img src="school.jpg" alt="School">
       <h3>Shree Swami Vivekananda Matriculation Higher Secondary School</h3>
       <p>SSLC (2020) - 94.2%</p>
@@ -140,7 +140,7 @@ themeToggleBtn.addEventListener('click', () => {
   </div>
 </section>
 
-<section id="achievements" data-aos="zoom-out">
+<section id="achievements" data-aos="zoom-out" data-aos-once="false" data-aos-mirror="true">
   <h2>Achievements</h2>
     
   <div class="slideshow-container">
@@ -449,8 +449,8 @@ themeToggleBtn.addEventListener('click', () => {
 </script>
 
 
-
-<section id="certifications" data-aos="fade-up">
+ 
+<section id="certifications" data-aos="fade-up" data-aos-once="false" data-aos-mirror="true">
   <h2>Certifications</h2>
   <div class="cert-slider">
     <div class="cert-slide active">
@@ -489,7 +489,7 @@ function showNextSlide() {
 setInterval(showNextSlide, 3000); // 3s per slide
 </script>
 
-<section id="projects" data-aos="fade-up">
+<section id="projects" data-aos="fade-up" data-aos-once="false" data-aos-mirror="true">
   <h2>Projects</h2>
   <div class="card-grid">
     <div class="mini-card"><span>🌐</span><p>Job & Internship Portal with AI Career Guidance</p></div>
@@ -498,16 +498,62 @@ setInterval(showNextSlide, 3000); // 3s per slide
   </div>
 </section>
 
-<section id="internships" data-aos="fade-up">
+<!-- Internships Section -->
+<section id="internships" data-aos="fade-up" data-aos-once="false" data-aos-mirror="true">
   <h2>Internships</h2>
-  <div class="card-grid">
-    <div class="mini-card"><span>🔐</span><p>Virtual Cybersecurity Internship - Shadowfox</p></div>
-    <div class="mini-card"><span>📈</span><p>Data Analysis Project - Jupiter Brothers</p></div>
+  <div class="internship-slider">
+
+<!-- Internship 1 -->
+<div class="internship-slide slide-left active">
+  <div class="internship-image">
+    <img src="vibathi.jpg" alt="Vibhathi Labs Internship Certificate">
+    <div class="company-tag">Vibhathi Labs – Basics of Oracle APEX</div>
+  </div>
+  <div class="internship-details">
+    <h3>Basics of Oracle APEX Internship</h3>
+    <p><strong>Duration:</strong> 17th March 2025 – 28th March 2025</p>
+    <p><strong>Role:</strong> Intern – Oracle APEX Fundamentals</p>
+    <p><strong>Key Learning:</strong> Gained foundational understanding of Oracle APEX for web application development, working with database integration, building interactive forms and reports, and applying hands-on project workflows under mentorship at Vibhathi Labs.</p>
+  </div>
+</div>
+
+
+<!-- Internship 2 -->
+<div class="internship-slide slide-right active">
+  <div class="internship-image">
+    <img src="shadowfox.jpg" alt="ShadowFox Cybersecurity Internship Certificate">
+    <div class="company-tag">ShadowFox – Virtual Cybersecurity Internship (Sep 2024)</div>
+  </div>
+  <div class="internship-details">
+    <h3>Virtual Cybersecurity Internship</h3>
+    <p><strong>Duration:</strong> 1 Month (September 1 – September 29, 2024)</p>
+    <p><strong>Role:</strong> Cybersecurity Intern</p>
+    <p><strong>Key Learning & Tasks:</strong> Conducted penetration testing tasks including open-port scanning, directory fuzzing, and network traffic interception using tools like Nmap, Dirb, and Wireshark. Intermediate tasks involved decrypting a hash-encoded password to unlock a VeraCrypt file, locating an executable’s entry point via PE Explorer, and creating a reverse shell using Metasploit. Advanced level included completing a TryHackMe pentesting room challenge, enhancing report-writing and documentation skills.</p>
+  </div>
+</div>
+
+
+<!-- Internship 3 -->
+<div class="internship-slide slide-left active">
+  <div class="internship-image">
+    <img src="jupiter.jpg" alt="Jupiter Brothers Internship Certificate">
+    <div class="company-tag">Jupiter Brothers - Data Science Project</div>
+  </div>
+  <div class="internship-details">
+    <h3>Data Analysis & Predictive Modeling Internship</h3>
+    <p><strong>Duration:</strong> 3 Months</p>
+    <p><strong>Role:</strong> Intern - Data Science</p>
+    <p><strong>Key Learning:</strong> Conducted real-time data analysis, developed predictive models, and built data visualizations using <b>Python</b>, <b>SQL</b>, and <b>Matplotlib/Seaborn</b>.  
+    Worked on large datasets, improved accuracy of forecasting models, and presented insights to the team.</p>
+  </div>
+</div>
+
+
   </div>
 </section>
 
 
-<section id="contact" data-aos="zoom-in-up">
+<section id="contact" data-aos="slide-up" data-aos-once="false" data-aos-mirror="true">
   <h2>Contact Me</h2>
   <form class="contact-form" id="contact-form">
     <input type="text" name="from_name" placeholder="Your Name" required>
@@ -562,6 +608,25 @@ setInterval(showNextSlide, 3000); // 3s per slide
   document.getElementById("theme-toggle").addEventListener("click", () => {
     document.body.classList.toggle("dark-mode");
   });
+</script>
+
+<script>
+  let lastScrollTop = 0;
+window.addEventListener("scroll", function() {
+  let st = window.pageYOffset || document.documentElement.scrollTop;
+  const contact = document.querySelector("#contact");
+
+  if (st > lastScrollTop) {
+    // scrolling down
+    contact.setAttribute("data-aos", "slide-up");
+  } else {
+    // scrolling up
+    contact.setAttribute("data-aos", "slide-down");
+  }
+  lastScrollTop = st <= 0 ? 0 : st; 
+  AOS.refresh(); // reapply animations
+}, false);
+
 </script>
 
 </body>
