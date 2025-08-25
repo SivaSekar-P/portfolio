@@ -453,7 +453,7 @@ themeToggleBtn.addEventListener('click', () => {
 <section id="certifications" data-aos="fade-up" data-aos-once="false" data-aos-mirror="true">
   <h2>Certifications</h2>
   <div class="cert-slider">
-    <div class="cert-slide active">
+    <div class="cert-slide">
       <img src="java.jpg" alt="nptel_java" class="cert-icon">
       <p>cleared "Programming in Java" exam by NPTEL with ELITE certification</p>
     </div>
@@ -463,7 +463,7 @@ themeToggleBtn.addEventListener('click', () => {
     </div>
     <div class="cert-slide">
       <img src="c.jpg" alt="nptel_c" class="cert-icon">
-      <p>cleared "Prblem solving through Programming in C" exam by NPTEL</p>
+      <p>cleared "Problem solving through Programming in C" exam by NPTEL</p>
     </div>
     <div class="cert-slide">
       <img src="Azure.jpg" alt="azure" class="cert-icon">
@@ -476,18 +476,7 @@ themeToggleBtn.addEventListener('click', () => {
   </div>
 </section>
 
-<script>
-let currentIndex = 0;
-const slides = document.querySelectorAll(".cert-slide");
 
-function showNextSlide() {
-  slides[currentIndex].classList.remove("active");
-  currentIndex = (currentIndex + 1) % slides.length;
-  slides[currentIndex].classList.add("active");
-}
-
-setInterval(showNextSlide, 3000); // 3s per slide
-</script>
 
 <section id="projects" data-aos="fade-up" data-aos-once="false" data-aos-mirror="true">
   <h2>Projects</h2>
