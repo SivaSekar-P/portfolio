@@ -450,20 +450,6 @@ body.dark-mode .company-tag {
   .internship-image img { height: auto; max-height: 250px; }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Certificate & Internship Image Hover Pop-up Effect */
 .cert-icon,
 .internship-image img {
@@ -514,9 +500,6 @@ body.dark-mode .company-tag {
     text-align: center;
   }
 }
-
-
-
 
 [data-aos="slide-up"] {
   transform: translateY(50px);
