@@ -457,11 +457,19 @@ body.dark-mode .company-tag {
   will-change: transform;
 }
 
-/* Hover enlarge effect ONLY for certifications & internships */
-.cert-icon:hover,
-.internship-image img:hover {
-  transform: scale(1.15);   /* Slightly larger zoom */
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+/* Vertical certificates ONLY (Wipro & LOR) */
+.vertical-cert {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Show FULL vertical certificate */
+.vertical-cert .cert-icon {
+  width: 100%;
+  max-width: 260px;
+  height: auto;
+  object-fit: contain;
 }
 
 /* Prevent overlapping of zoomed images inside internships */
@@ -489,6 +497,7 @@ body.dark-mode .company-tag {
 .internship-slide:nth-child(even) {
   flex-direction: row-reverse;
 }
+
 
 /* Responsive fix */
 @media (max-width: 900px) {
